@@ -1,0 +1,76 @@
+{
+  "name": "comprehensive_retrieval_study",
+  "description": "Comprehensive study comparing different retrieval configurations across multiple datasets and metrics",
+  "model_configs": [
+    {
+      "name": "baseline_linear",
+      "dense_model": "hashing-encoder",
+      "sparse_model": "bm25",
+      "fusion_strategy": "linear",
+      "dense_weight": 0.7,
+      "sparse_weight": 0.3,
+      "use_ann": false
+    },
+    {
+      "name": "rrf_no_ann",
+      "dense_model": "hashing-encoder",
+      "sparse_model": "bm25",
+      "fusion_strategy": "rrf",
+      "use_ann": false
+    },
+    {
+      "name": "rrf_with_ann",
+      "dense_model": "all-MiniLM-L6-v2",
+      "sparse_model": "bm25",
+      "fusion_strategy": "rrf",
+      "use_ann": true
+    },
+    {
+      "name": "dense_only",
+      "dense_model": "all-MiniLM-L6-v2",
+      "sparse_model": "bm25",
+      "fusion_strategy": "linear",
+      "dense_weight": 1.0,
+      "sparse_weight": 0.0,
+      "use_ann": true
+    },
+    {
+      "name": "sparse_only",
+      "dense_model": "hashing-encoder",
+      "sparse_model": "bm25",
+      "fusion_strategy": "linear",
+      "dense_weight": 0.0,
+      "sparse_weight": 1.0,
+      "use_ann": false
+    },
+    {
+      "name": "balanced_hybrid",
+      "dense_model": "all-MiniLM-L6-v2",
+      "sparse_model": "bm25",
+      "fusion_strategy": "linear",
+      "dense_weight": 0.5,
+      "sparse_weight": 0.5,
+      "use_ann": true
+    }
+  ],
+  "datasets": [
+    "synthetic",
+    "scifact",
+    "nfcorpus"
+  ],
+  "metrics": [
+    "accuracy",
+    "precision",
+    "recall",
+    "f1_score",
+    "runtime"
+  ],
+  "hyperparameters": {
+    "dense_weight": [0.3, 0.5, 0.7, 0.9],
+    "sparse_weight": [0.1, 0.3, 0.5, 0.7],
+    "fusion_strategy": ["linear", "rrf"],
+    "use_ann": [true, false]
+  },
+  "cross_validation_folds": 5,
+  "random_seed": 42
+} 

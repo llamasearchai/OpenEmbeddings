@@ -1,0 +1,3 @@
+[console_scripts]
+openembeddings = openembeddings.cli:_main
+openembeddings-research = openembeddings.advanced_cli:_main

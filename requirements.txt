@@ -1,0 +1,132 @@
+# Core dependencies - Production ready versions
+numpy>=1.24.0,<2.0
+torch>=2.0.0,<3.0
+transformers>=4.35.0
+sentence-transformers>=2.2.2
+tokenizers>=0.14.0
+accelerate>=0.23.0
+
+# Sparse retrieval and text processing
+rank_bm25>=0.2.2
+nltk>=3.8.1
+spacy>=3.7.0
+
+# Search and indexing
+faiss-cpu>=1.7.4
+# For GPU support, replace faiss-cpu with:
+# faiss-gpu>=1.7.4
+
+# CLI and user interface
+typer>=0.9.0
+rich>=13.7.0
+click>=8.1.0
+
+# Data processing and analysis
+pandas>=2.1.0
+datasets>=2.14.0
+scikit-learn>=1.3.0
+scipy>=1.11.0
+
+# Visualization and plotting
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.17.0
+
+# Benchmarking and evaluation
+beir>=2.0.0
+mteb>=1.1.1
+pytrec_eval>=0.5
+
+# Hyperparameter optimization
+optuna>=3.4.0
+hyperopt>=0.2.7
+
+# Experiment tracking and logging
+wandb>=0.16.0
+tensorboard>=2.15.0
+loguru>=0.7.0
+
+# Configuration management
+hydra-core>=1.3.0
+omegaconf>=2.3.0
+pyyaml>=6.0.1
+
+# Performance monitoring and profiling
+psutil>=5.9.0
+memory_profiler>=0.61.0
+line_profiler>=4.1.0
+py-cpuinfo>=9.0.0
+tqdm>=4.66.0
+
+# Web API and deployment
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+pydantic>=2.5.0
+httpx>=0.25.0
+redis>=5.0.0
+
+# Interactive interfaces
+jupyter>=1.0.0
+jupyterlab>=4.0.0
+ipywidgets>=8.1.0
+gradio>=4.0.0
+streamlit>=1.28.0
+
+# Development and testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+pytest-asyncio>=0.21.0
+black>=23.10.0
+isort>=5.12.0
+flake8>=6.1.0
+mypy>=1.7.0
+pre-commit>=3.5.0
+
+# Advanced NLP and ML
+evaluate>=0.4.0
+tokenizers>=0.14.0
+safetensors>=0.4.0
+
+# File formats and serialization
+joblib>=1.3.0
+pickle-mixin>=1.0.2
+h5py>=3.10.0
+zarr>=2.16.0
+
+# Networking and async
+aiohttp>=3.9.0
+aiofiles>=23.2.0
+asyncio-throttle>=1.0.2
+
+# Security and authentication
+cryptography>=41.0.0
+passlib>=1.7.4
+python-jose>=3.3.0
+
+# Utilities
+python-dotenv>=1.0.0
+packaging>=23.2
+wheel>=0.41.0
+setuptools>=68.0.0
+
+# Optional: GPU acceleration (uncomment if needed)
+# torch-audio>=2.0.0
+# torch-vision>=0.15.0
+
+# Optional: Additional embedding models (uncomment if needed)
+# sentence-transformers[sentence-transformers]>=2.2.2
+
+# Optional: Advanced optimization (uncomment if needed)  
+# intel-extension-for-pytorch>=2.0.0
+# onnx>=1.15.0
+# onnxruntime>=1.16.0
+
+# Platform-specific optimizations
+# For Apple Silicon (M1/M2), add:
+# tensorflow-macos>=2.13.0  # if using TensorFlow models
+
+# For better CPU performance on x86_64:
+# mkl>=2023.2.0
+
+# Note: Some packages may have version conflicts.
+# Use pip-tools or poetry for better dependency resolution. 
