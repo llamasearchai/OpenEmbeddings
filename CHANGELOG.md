@@ -91,6 +91,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Docker configuration
 - Test framework setup
 
+## [1.0.1] - 2025-06-22
+
+### Changed
+- Polished README with project badges and concise tagline for improved presentation
+- No code changes; documentation only
+
 ---
 
 For more details, see the [documentation](docs/MASTER_DOCUMENTATION.md) and [examples](examples/). 
