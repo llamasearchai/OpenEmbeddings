@@ -1,5 +1,12 @@
 # OpenEmbeddings
 
+> Production-ready embedding & retrieval framework with hybrid search, quantization, and rigorous evaluation
+
+[![PyPI](https://img.shields.io/pypi/v/openembeddings?color=brightgreen&label=PyPI)](https://pypi.org/project/openembeddings/)
+[![CI](https://img.shields.io/github/actions/workflow/status/llamasearchai/OpenEmbeddings/ci.yml?branch=main&label=CI)](https://github.com/llamasearchai/OpenEmbeddings/actions/workflows/ci.yml)
+[![Code Coverage](https://codecov.io/gh/llamasearchai/OpenEmbeddings/branch/main/graph/badge.svg)](https://codecov.io/gh/llamasearchai/OpenEmbeddings)
+[![License](https://img.shields.io/github/license/llamasearchai/OpenEmbeddings)](LICENSE)
+
 A comprehensive, production-ready framework for embedding and retrieval research, designed for both academic research and real-world applications. Features state-of-the-art transformer models, scalable ANN search with FAISS, advanced fusion techniques, and comprehensive benchmarking capabilities.
 
 **Author**: Nik Jois <nikjois@llamasearch.ai>
