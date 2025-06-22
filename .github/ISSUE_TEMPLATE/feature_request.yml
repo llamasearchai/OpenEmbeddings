@@ -1,0 +1,182 @@
+name: Feature Request
+description: Suggest a new feature or enhancement for OpenEmbeddings
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to suggest a new feature! Please provide as much detail as possible.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Feature Summary
+      description: A clear and concise description of the feature you'd like to see added.
+      placeholder: Briefly describe the feature...
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation and Use Case
+      description: Why would this feature be useful? What problem does it solve?
+      placeholder: |
+        - What problem are you trying to solve?
+        - How would this feature help you or others?
+        - Are there any workarounds currently available?
+    validations:
+      required: true
+
+  - type: textarea
+    id: detailed-description
+    attributes:
+      label: Detailed Description
+      description: Provide a detailed description of how the feature should work.
+      placeholder: |
+        Describe the feature in detail:
+        - How should it behave?
+        - What inputs/outputs are expected?
+        - How should it integrate with existing functionality?
+    validations:
+      required: true
+
+  - type: textarea
+    id: api-design
+    attributes:
+      label: Proposed API Design
+      description: If applicable, provide a proposed API design or code example.
+      render: python
+      placeholder: |
+        # Example usage:
+        from openembeddings import NewFeature
+        
+        feature = NewFeature(param1="value1")
+        result = feature.method(input_data)
+    validations:
+      required: false
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      description: Which component would this feature primarily affect?
+      options:
+        - "Dense Embeddings"
+        - "Sparse Embeddings"
+        - "Hybrid Retrieval"
+        - "Re-ranking"
+        - "CLI"
+        - "Web API"
+        - "Evaluation"
+        - "Quantization/Optimization"
+        - "Docker"
+        - "Documentation"
+        - "New Component"
+        - "Core Architecture"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this feature to you?
+      options:
+        - "Low - Nice to have"
+        - "Medium - Would be helpful"
+        - "High - Important for my use case"
+        - "Critical - Blocking my work"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: feature-type
+    attributes:
+      label: Feature Type
+      description: What type of feature is this?
+      options:
+        - label: New functionality
+        - label: Performance improvement
+        - label: Usability enhancement
+        - label: API improvement
+        - label: Documentation improvement
+        - label: Developer experience improvement
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Have you considered any alternative solutions or workarounds?
+      placeholder: |
+        - What alternatives have you considered?
+        - Why wouldn't those alternatives work?
+        - Are there existing tools that provide similar functionality?
+    validations:
+      required: false
+
+  - type: textarea
+    id: implementation
+    attributes:
+      label: Implementation Ideas
+      description: Do you have any ideas about how this could be implemented?
+      placeholder: |
+        - Any thoughts on implementation approach?
+        - Are there existing libraries or techniques that could be used?
+        - What challenges might arise?
+    validations:
+      required: false
+
+  - type: textarea
+    id: breaking-changes
+    attributes:
+      label: Breaking Changes
+      description: Would this feature require any breaking changes to the existing API?
+      placeholder: |
+        - Would this change existing behavior?
+        - Would it require changes to existing user code?
+        - How could backward compatibility be maintained?
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other context, screenshots, or examples about the feature request.
+      placeholder: |
+        - Links to relevant papers, documentation, or examples
+        - Screenshots or diagrams if applicable
+        - Any other relevant information
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      description: Are you willing to contribute to implementing this feature?
+      options:
+        - label: I am willing to implement this feature myself
+        - label: I can help with testing and feedback
+        - label: I can help with documentation
+        - label: I can provide domain expertise
+        - label: I would prefer someone else to implement this
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      description: Please confirm the following
+      options:
+        - label: I have searched existing issues to ensure this is not a duplicate
+          required: true
+        - label: I have provided a clear use case and motivation
+          required: true
+        - label: I have considered the impact on existing functionality
+          required: false
+        - label: I am willing to engage in discussion about this feature
+          required: true 
